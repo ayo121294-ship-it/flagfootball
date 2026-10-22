@@ -152,6 +152,18 @@ p{margin:0}
 #s8 .stg p{display:block;font-size:19px;line-height:1.35}
 #s8 .tag{font-size:15px;padding:1px 8px;margin-right:6px}
 #s8 .lead{font-size:24px}
+#s8 .stg h3,#s8 .stg p,#s8 .lead{word-break:keep-all}
+#s8 .lead b{white-space:nowrap}
+#s6b .tile h3,#s6b .tile p,#s7 .tile h3,#s7 .tile p,#s16b .tile h3,#s16b .tile p,#s16b .banner,#s11 .legend span{word-break:keep-all}
+.tiles.four .tile{padding:22px 14px}
+.tiles.four .tile p{font-size:19px}
+#s11 .legend div{grid-template-columns:62px 1fr;font-size:21px}
+#s11 .legend b{font-size:30px}
+#s12 .term p{word-break:keep-all}
+#s2bcols .card p{font-size:24px}
+#s9 .row{grid-template-columns:200px 1fr 380px}
+#s9 .row .e{font-size:22px;word-break:keep-all}
+#s9 .row .p{word-break:keep-all}
 /* 9 */
 .rows{display:grid;gap:14px}
 .row{display:grid;grid-template-columns:230px 1fr 400px;gap:20px;align-items:center;background:var(--stage-2);border:2px solid var(--line);border-radius:16px;padding:16px 24px}
@@ -254,9 +266,9 @@ p{margin:0}
   <p class="eyebrow">LA 2028 · 우리 또래 이야기</p>
   <h2>새로 들어오는 종목 5개</h2>
   <div class="chips" data-s="1"><span class="chip">야구·소프트볼</span><span class="chip">크리켓</span><span class="chip fill">플래그풋볼</span><span class="chip">라크로스</span><span class="chip">스쿼시</span></div>
-  <div class="cols">
-    <div class="card" data-s="2"><h3>우리 또래가 이미 국가대표</h3><p>2026년 3월, 대구 군위중학교 여학생 11명이 15세 이하 대한민국 대표로 출전했어요.</p></div>
-    <div class="card" data-s="3"><h3>NFL 플래그풋볼 아시아·태평양 챔피언십</h3><p>2026년 3월 19일~22일, 호주 골드코스트에서 열렸어요.</p></div>
+  <div class="cols" id="s2bcols">
+    <div class="card" data-s="2"><h3>우리 또래가 이미 국가대표</h3><p style="word-break:keep-all"><span style="white-space:nowrap">2026년 3월, 대구 군위중학교 여학생 11명이</span><br>15세 이하 대한민국 대표로 출전했어요.</p></div>
+    <div class="card" data-s="3"><h3>NFL 플래그풋볼 아시아·태평양 챔피언십</h3><p style="word-break:keep-all"><span style="white-space:nowrap">2026년 3월 19일~22일, 호주 골드코스트에서</span><br>열렸어요.</p></div>
   </div>
   <p class="lead" data-s="4">미식축구를 하지 않는 나라의 중학생이 어떻게 국가대표가 됐을까?</p>
 </section>
@@ -363,9 +375,9 @@ p{margin:0}
   <p class="eyebrow">규칙 · 뽑히면 정지, 앞 패스</p>
   <h2>멈추는 곳, 던지는 곳</h2>
   <div class="tiles">
-    <div class="tile" data-s="1"><div class="n" style="font-size:96px">정지</div><h3>뽑히면 그 자리에서 멈춰요</h3><p>공을 든 선수의 플래그가 뽑히면 멈추고, 그 자리가 다음 출발선이에요.</p></div>
+    <div class="tile" data-s="1"><div class="n" style="font-size:96px">정지</div><h3>뽑히면 그 자리에서 멈춰요</h3><p>공을 든 선수의 플래그가 <span style="white-space:nowrap">뽑히면</span> 멈추고, 그 자리가 다음 출발선이에요.</p></div>
     <div class="tile" data-s="2"><div class="n" style="font-size:96px">뒤에서</div><h3>출발선 뒤에서 던져요</h3><p>선을 넘어가서 앞으로 던지는 것은 안 돼요.</p></div>
-    <div class="tile alt" data-s="3"><div class="n" style="font-size:96px">1번</div><h3>앞 패스는 한 번만</h3><p>한 번의 플레이에서 앞으로 던지는 패스는 한 번이에요.</p></div>
+    <div class="tile alt" data-s="3"><div class="n" style="font-size:96px">1번</div><h3>앞 패스는 한 번만</h3><p>한 번의 플레이에서 앞으로 던지는 패스는 <span style="white-space:nowrap">한 번이에요.</span></p></div>
   </div>
   <p class="note-s" data-s="4">※ 몸싸움은 안 돼요: 밀기, 잡기, 부딪히기, 플래그 가리기 금지</p>
 </section>
@@ -376,71 +388,9 @@ p{margin:0}
   <h2>점수는 이렇게 얻어요</h2>
   <div class="tiles four">
     <div class="tile" data-s="1"><div class="n">6</div><h3>터치다운</h3><p>공을 들고 달리거나 패스를 받아 상대 터치다운 구역에 들어가면 6점</p></div>
-    <div class="tile" data-s="2"><div class="n">+1</div><h3>5야드(4.6m) 도전</h3><p>터치다운 뒤 5야드(4.6m)에서 시작. 성공하면 1점, 패스만 가능</p></div>
-    <div class="tile" data-s="3"><div class="n">+2</div><h3>10야드(9.1m) 도전</h3><p>10야드(9.1m)에서 시작. 성공하면 2점, 달리기와 패스 모두 가능</p></div>
-    <div class="tile alt" data-s="4"><div class="n">+1</div><h3>우리 반 보너스</h3><p><span class="tag o">우리 반 규칙</span><br>한 번의 공격에서 3명 이상이 공을 만지면 보너스 1점</p></div>
-  </div>
-</section>
-
-<!-- 8 -->
-<section class="slide" id="s8" data-note="센터가 스냅한 뒤부터 플레이가 끝날 때까지, 시간 순서대로 공격팀과 수비팀이 조심할 반칙입니다. → 키로 단계를 하나씩 보여 주며 “지금 어느 단계일까요?”, “이 단계에서 수비는 무엇을 조심해야 할까요?”를 물어보세요. 거리(5야드(4.6m))와 벌칙은 수업용으로 단순하게 정한 값이고 대회마다 조금씩 달라요. 오프사이드는 스냅 전에 수비가 공이 놓인 선(출발선)을 넘는 반칙입니다. 불법 러시는 QB 쪽으로 달려드는 수비수(러셔)가 출발선에서 7야드(6.4m) 안쪽에서 출발하는 반칙입니다. 러셔는 7야드(6.4m) 이상 떨어진 곳에서 출발해야 합니다.">
-  <p class="eyebrow">규칙 ④ 플레이의 시간 순서</p>
-  <h2>한 번의 플레이, 5단계</h2>
-  <div class="s8grid">
-    <div class="s8img">
-      <svg viewBox="0 0 470 360" role="img" aria-label="수비 5명(수비수 4명, 러셔 1명)과 공격 5명(센터, QB, 러닝백, 리시버 둘)의 진영">
-        <rect width="470" height="360" rx="14" fill="#2F7D6B"/>
-        <line x1="14" y1="195" x2="456" y2="195" stroke="#F5F1E6" stroke-width="4" stroke-dasharray="14 9"/>
-        <text x="235" y="30" class="lbl" text-anchor="middle" font-size="20">수비팀 5명</text>
-        <circle cx="75" cy="125" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="75" y="125" dy=".35em" text-anchor="middle" class="pl">수</text>
-        <circle cx="175" cy="140" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="175" y="140" dy=".35em" text-anchor="middle" class="pl">수</text>
-        <circle cx="295" cy="140" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="295" y="140" dy=".35em" text-anchor="middle" class="pl">수</text>
-        <circle cx="395" cy="125" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="395" y="125" dy=".35em" text-anchor="middle" class="pl">수</text>
-        <circle cx="235" cy="85" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4" stroke="#F5F1E6" stroke-dasharray="6 4"/><text x="235" y="85" dy=".35em" text-anchor="middle" class="pl" style="font-size:15px">러셔</text>
-        <circle cx="235" cy="222" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="235" y="222" dy=".35em" text-anchor="middle" class="pl">C</text>
-        <circle cx="235" cy="288" r="26" fill="#F2A13B" stroke="#12332B" stroke-width="4"/><text x="235" y="288" dy=".35em" text-anchor="middle" class="pl">QB</text>
-        <circle cx="150" cy="296" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="150" y="296" dy=".35em" text-anchor="middle" class="pl">RB</text>
-        <circle cx="75" cy="222" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="75" y="222" dy=".35em" text-anchor="middle" class="pl">R1</text>
-        <circle cx="395" cy="222" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="395" y="222" dy=".35em" text-anchor="middle" class="pl">R2</text>
-        <text x="235" y="344" class="lbl" text-anchor="middle" font-size="20">공격팀 5명</text>
-      </svg>
-      <p class="lead" data-s="6">플레이가 끝나면 플래그가 뽑힌 자리가 <b>다음 공격 자리</b>예요.</p>
-    </div>
-    <div class="stages">
-    <div class="stg" data-s="1"><div class="no">1</div><h3>스냅 전</h3><p><span class="tag o">공격</span>부정출발</p><p><span class="tag d">수비</span>오프사이드 (스냅 전 선 넘음)</p></div>
-    <div class="stg" data-s="2"><div class="no">2</div><h3>스냅 · 러시</h3><p><span class="tag o">공격</span>QB 달리기</p><p><span class="tag d">수비</span>불법 러시 (7야드(6.4m) 안쪽 출발)</p></div>
-    <div class="stg" data-s="3"><div class="no">3</div><h3>패스 · 달리기</h3><p><span class="tag o">공격</span>수비를 밀기</p><p><span class="tag d">수비</span>홀딩 · 패스 방해</p></div>
-    <div class="stg" data-s="4"><div class="no">4</div><h3>플래그 뽑기</h3><p><span class="tag o">공격</span>플래그 가리기</p><p><span class="tag d">수비</span>몸 잡기 · 빠른 뽑기</p></div>
-    <div class="stg" data-s="5"><div class="no">5</div><h3>플레이 끝</h3><p><span class="tag o">공격</span>거친 행동</p><p><span class="tag d">수비</span>거친 행동</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 9 -->
-<section class="slide" id="s9" data-note="벌칙을 네 가지로 단순화했습니다. 절차 반칙은 같은 기회로 다시, 공격 반칙은 5야드(4.6m) 뒤로와 기회 1번 소모, 수비 반칙은 5야드(4.6m) 앞으로와 새 공격권, 위험한 반칙은 거기에 쿨다운이 붙습니다. 쿨다운은 잠시 코트 밖에서 쉬고 돌아오는 방식으로 운영하세요. 5야드(4.6m)와 벌칙 방식은 수업용 단순화이고 공식 대회와 조금 다를 수 있습니다.">
-  <p class="eyebrow">규칙 ⑤ 반칙과 벌칙</p>
-  <h2>반칙하면 이렇게 돼요</h2>
-  <div class="rows">
-    <div class="row" data-s="1"><span class="k">절차 반칙</span><span class="e">부정출발 · 지연 · 오프사이드 · 불법 러시</span><span class="p">반칙한 팀 쪽으로 5야드(4.6m), 같은 기회로 다시</span></div>
-    <div class="row" data-s="2"><span class="k">공격 반칙</span><span class="e">플래그 가드 · 공격 패스 방해 · 불법 패스 · QB 달리기</span><span class="p">5야드(4.6m) 뒤로 + 기회 1번 사용</span></div>
-    <div class="row" data-s="3"><span class="k">수비 반칙</span><span class="e">홀딩 · 불법 접촉 · 수비 패스 방해 · 빠른 플래그 뽑기</span><span class="p">5야드(4.6m) 앞으로 + 새 공격권(기회 4번)</span></div>
-    <div class="row danger" data-s="4"><span class="k">위험한 반칙</span><span class="e">몸 잡기 · 밀치기 · QB 접촉 · 거친 말</span><span class="p">위 벌칙 + 쿨다운(잠시 쉬기)</span></div>
-  </div>
-  <p class="note-s" data-s="5">※ 5야드(4.6m) 벌칙 방식은 우리 반 수업용으로 단순하게 정한 규칙이에요. 대회마다 조금씩 달라요.</p>
-</section>
-
-<!-- 10 -->
-<section class="slide" id="s10" data-note="2~3분 경기 영상을 보기 전에 관찰 과제를 줍니다. 공을 던지는 사람이 아니라 공 없는 사람의 움직임을 보게 하세요. → 키를 세 번 누르면 영상이 나타납니다(처음부터 재생). 영상이 학교 인터넷에서 막히거나 화면에 보이지 않으면 아래 ‘새 탭에서 열기’ 링크를 누르세요. 학교 정책에 맞는 공개 영상인지 수업 전에 확인하세요.">
-  <p class="eyebrow">영상 보기 전에 미션</p>
-  <div class="mission vid">
-    <div class="mtext">
-      <div class="say" data-s="1">던지는 사람 말고,<br><em>공 없는 사람</em>을 봐.</div>
-      <p class="lead" data-s="2">어디로, 왜 달릴까? 영상을 보고 한 가지만 찾아 말해 봐요.</p>
-    </div>
-    <div class="vwrap" data-s="3">
-      <div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/piUyFwiZe_Y?rel=0" title="플래그풋볼 경기 영상" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-      <a class="vgo" href="https://www.youtube.com/watch?v=piUyFwiZe_Y" target="_blank" rel="noopener">영상이 안 보이면 새 탭에서 열기</a>
-    </div>
+    <div class="tile" data-s="2"><div class="n">+1</div><h3>5야드(4.6m) 도전</h3><p>터치다운 뒤<br><span style="white-space:nowrap">5야드(4.6m)에서 시작.</span><br><span style="white-space:nowrap">성공하면 1점, 패스만 가능</span></p></div>
+    <div class="tile" data-s="3"><div class="n">+2</div><h3>10야드(9.1m) 도전</h3><p><span style="white-space:nowrap">10야드(9.1m)에서 시작.</span><br><span style="white-space:nowrap">성공하면</span> 2점, 달리기와 패스 모두 가능</p></div>
+    <div class="tile alt" data-s="4"><div class="n">+1</div><h3>우리 반 보너스</h3><p><span class="tag o">우리 반 규칙</span><br><span style="white-space:nowrap">한 번의 공격에서 3명 이상이</span><br><span style="white-space:nowrap">공을 만지면 보너스 1점</span></p></div>
   </div>
 </section>
 
@@ -469,12 +419,12 @@ p{margin:0}
       </g>
     </svg>
     <div class="legend">
-      <div data-s="1"><b>C</b><span><strong>센터</strong> 공을 QB에게 넘겨 시작해요</span></div>
-      <div data-s="1"><b>QB</b><span><strong>쿼터백</strong> 던지거나 건네요, 직접 달리진 않아요</span></div>
-      <div data-s="1"><b>R</b><span><strong>리시버</strong> 정해진 길로 달려 패스를 받아요</span></div>
-      <div data-s="1"><b>RB</b><span><strong>러닝백</strong> 건네받은 공을 들고 달려요</span></div>
-      <div data-s="1"><b>★</b><span><strong>QB만 빼고</strong> 4명 모두 뛰고, 모두 받을 수 있어요</span></div>
-      <div data-s="2"><b>수</b><span><strong>수비 5명</strong> 수비수 4명 + 러셔 1명, 플래그를 뽑고 패스를 막아요</span></div>
+      <div data-s="1"><b>C</b><span><strong>센터</strong> 공을 QB에게 넘겨 시작</span></div>
+      <div data-s="1"><b>QB</b><span><strong>쿼터백</strong> 던지거나 건넴,<br>직접 달리지 않음</span></div>
+      <div data-s="1"><b>R</b><span><strong>리시버</strong> 정해진 길로 달려<br>패스를 받음</span></div>
+      <div data-s="1"><b>RB</b><span><strong>러닝백</strong> 건네받은 공을 들고 달림</span></div>
+      <div data-s="1"><b>★</b><span><strong>QB 외</strong> 4명 모두 달리고,<br>모두 받을 수 있음</span></div>
+      <div data-s="2"><b>수</b><span><strong>수비 5명</strong> 수비수 4명 + 러셔 1명, 플래그를 뽑고 패스를 막음</span></div>
     </div>
   </div>
 </section>
@@ -484,14 +434,76 @@ p{margin:0}
   <p class="eyebrow">꼭 알아야 할 용어</p>
   <h2>용어 8개면 충분해요</h2>
   <div class="terms">
-    <div class="term" data-s="1"><h3>다운</h3><p>공격 기회 한 번, 4번까지</p></div>
+    <div class="term" data-s="1"><h3>다운</h3><p>공격 기회 한 번, <span style="white-space:nowrap">4번까지</span></p></div>
     <div class="term" data-s="1"><h3>스냅</h3><p>센터가 QB에게 공을 넘겨 시작</p></div>
-    <div class="term" data-s="2"><h3>핸드오프</h3><p>QB가 손으로 공을 건네는 것</p></div>
-    <div class="term" data-s="2"><h3>터치다운</h3><p>상대 터치다운 구역에서 득점, 6점</p></div>
-    <div class="term" data-s="3"><h3>플래그 뽑기</h3><p>플래그를 뽑아 플레이를 끝내는 것</p></div>
-    <div class="term" data-s="3"><h3>루트</h3><p>리시버가 달리는 정해진 길</p></div>
+    <div class="term" data-s="2"><h3>핸드오프</h3><p>QB가 손으로 공을<br><span style="white-space:nowrap">건네는 것</span></p></div>
+    <div class="term" data-s="2"><h3>터치다운</h3><p>상대 터치다운 <span style="white-space:nowrap">구역에서</span> 득점, 6점</p></div>
+    <div class="term" data-s="3"><h3>플래그 뽑기</h3><p>플래그를 뽑아 <span style="white-space:nowrap">플레이를</span> 끝내는 것</p></div>
+    <div class="term" data-s="3"><h3>루트<small style="font-size:22px;color:var(--muted)"> (라우트)</small></h3><p style="white-space:nowrap;font-size:19px">리시버가 달리는 정해진 길</p></div>
     <div class="term" data-s="4"><h3>러셔</h3><p>QB 쪽으로 달려드는 수비수</p></div>
     <div class="term" data-s="4"><h3>콜</h3><p>팀원끼리 외치는 신호, “내 거!”</p></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide" id="s8" data-note="센터가 스냅한 뒤부터 플레이가 끝날 때까지, 시간 순서대로 공격팀과 수비팀이 조심할 반칙입니다. → 키로 단계를 하나씩 보여 주며 “지금 어느 단계일까요?”, “이 단계에서 수비는 무엇을 조심해야 할까요?”를 물어보세요. 거리(5야드(4.6m))와 벌칙은 수업용으로 단순하게 정한 값이고 대회마다 조금씩 달라요. 오프사이드는 스냅 전에 수비가 공이 놓인 선(출발선)을 넘는 반칙입니다. 불법 러시는 QB 쪽으로 달려드는 수비수(러셔)가 출발선에서 7야드(6.4m) 안쪽에서 출발하는 반칙입니다. 러셔는 7야드(6.4m) 이상 떨어진 곳에서 출발해야 합니다.">
+  <p class="eyebrow">규칙 ④ 플레이의 시간 순서</p>
+  <h2>한 번의 플레이, 5단계</h2>
+  <div class="s8grid">
+    <div class="s8img">
+      <svg viewBox="0 0 470 360" role="img" aria-label="수비 5명(수비수 4명, 러셔 1명)과 공격 5명(센터, QB, 러닝백, 리시버 둘)의 진영">
+        <rect width="470" height="360" rx="14" fill="#2F7D6B"/>
+        <line x1="14" y1="195" x2="456" y2="195" stroke="#F5F1E6" stroke-width="4" stroke-dasharray="14 9"/>
+        <text x="235" y="30" class="lbl" text-anchor="middle" font-size="20">수비팀 5명</text>
+        <circle cx="75" cy="125" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="75" y="125" dy=".35em" text-anchor="middle" class="pl">수</text>
+        <circle cx="175" cy="140" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="175" y="140" dy=".35em" text-anchor="middle" class="pl">수</text>
+        <circle cx="295" cy="140" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="295" y="140" dy=".35em" text-anchor="middle" class="pl">수</text>
+        <circle cx="395" cy="125" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4"/><text x="395" y="125" dy=".35em" text-anchor="middle" class="pl">수</text>
+        <circle cx="235" cy="85" r="26" fill="#E8683F" stroke="#12332B" stroke-width="4" stroke="#F5F1E6" stroke-dasharray="6 4"/><text x="235" y="85" dy=".35em" text-anchor="middle" class="pl" style="font-size:15px">러셔</text>
+        <circle cx="235" cy="222" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="235" y="222" dy=".35em" text-anchor="middle" class="pl">C</text>
+        <circle cx="235" cy="288" r="26" fill="#F2A13B" stroke="#12332B" stroke-width="4"/><text x="235" y="288" dy=".35em" text-anchor="middle" class="pl">QB</text>
+        <circle cx="150" cy="296" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="150" y="296" dy=".35em" text-anchor="middle" class="pl">RB</text>
+        <circle cx="75" cy="222" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="75" y="222" dy=".35em" text-anchor="middle" class="pl">R1</text>
+        <circle cx="395" cy="222" r="26" fill="#F5F1E6" stroke="#12332B" stroke-width="4"/><text x="395" y="222" dy=".35em" text-anchor="middle" class="pl">R2</text>
+        <text x="235" y="344" class="lbl" text-anchor="middle" font-size="20">공격팀 5명</text>
+      </svg>
+      <p class="lead" data-s="6">플레이가 끝나면 플래그가 뽑힌 자리가<br><b>다음 공격 자리</b>예요.</p>
+    </div>
+    <div class="stages">
+    <div class="stg" data-s="1"><div class="no">1</div><h3>스냅 전</h3><p><span class="tag o">공격</span>부정출발</p><p><span class="tag d">수비</span>오프사이드 (스냅 전 선 넘음)</p></div>
+    <div class="stg" data-s="2"><div class="no">2</div><h3>스냅 · 러시</h3><p><span class="tag o">공격</span>QB 달리기</p><p><span class="tag d">수비</span>불법 러시 (7야드(6.4m) 안쪽 출발)</p></div>
+    <div class="stg" data-s="3"><div class="no">3</div><h3>패스 · 달리기</h3><p><span class="tag o">공격</span>수비를 밀기</p><p><span class="tag d">수비</span>홀딩 · 패스 방해</p></div>
+    <div class="stg" data-s="4"><div class="no">4</div><h3>플래그 뽑기</h3><p><span class="tag o">공격</span>플래그 가리기</p><p><span class="tag d">수비</span>몸 잡기 · 빠른 뽑기</p></div>
+    <div class="stg" data-s="5"><div class="no">5</div><h3>플레이 끝</h3><p><span class="tag o">공격</span>거친 행동</p><p><span class="tag d">수비</span>거친 행동</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="slide" id="s9" data-note="벌칙을 네 가지로 단순화했습니다. 절차 반칙은 같은 기회로 다시, 공격 반칙은 5야드(4.6m) 뒤로와 기회 1번 소모, 수비 반칙은 5야드(4.6m) 앞으로와 새 공격권, 위험한 반칙은 거기에 쿨다운이 붙습니다. 쿨다운은 잠시 코트 밖에서 쉬고 돌아오는 방식으로 운영하세요. 5야드(4.6m)와 벌칙 방식은 수업용 단순화이고 공식 대회와 조금 다를 수 있습니다.">
+  <p class="eyebrow">규칙 ⑤ 반칙과 벌칙</p>
+  <h2>반칙하면 이렇게 돼요</h2>
+  <div class="rows">
+    <div class="row" data-s="1"><span class="k">절차 반칙</span><span class="e" style="white-space:nowrap">부정출발 · 지연 · 오프사이드 · 불법 러시</span><span class="p">반칙한 팀 쪽으로 5야드(4.6m), 같은 기회로 다시</span></div>
+    <div class="row" data-s="2"><span class="k">공격 반칙</span><span class="e">플래그 가드 · 공격 패스 방해 · 불법 패스 · QB 달리기</span><span class="p">5야드(4.6m) 뒤로 + 기회 1번 사용</span></div>
+    <div class="row" data-s="3"><span class="k">수비 반칙</span><span class="e">홀딩 · 불법 접촉 · 수비 패스 방해 · 빠른 플래그 뽑기</span><span class="p">5야드(4.6m) 앞으로 + 새 공격권 <span style="white-space:nowrap">(기회 4번)</span></span></div>
+    <div class="row danger" data-s="4"><span class="k">위험한 반칙</span><span class="e">몸 잡기 · 밀치기 · QB 접촉 · 거친 말</span><span class="p">위 벌칙 + 쿨다운(잠시 쉬기)</span></div>
+  </div>
+  <p class="note-s" data-s="5">※ 5야드(4.6m) 벌칙 방식은 우리 반 수업용으로 단순하게 정한 규칙이에요. 대회마다 조금씩 달라요.</p>
+</section>
+
+<!-- 10 -->
+<section class="slide" id="s10" data-note="2~3분 경기 영상을 보기 전에 관찰 과제를 줍니다. 공을 던지는 사람이 아니라 공 없는 사람의 움직임을 보게 하세요. → 키를 세 번 누르면 영상이 나타납니다(처음부터 재생). 영상이 학교 인터넷에서 막히거나 화면에 보이지 않으면 아래 ‘새 탭에서 열기’ 링크를 누르세요. 학교 정책에 맞는 공개 영상인지 수업 전에 확인하세요.">
+  <p class="eyebrow">영상 보기 전에 미션</p>
+  <div class="mission vid">
+    <div class="mtext">
+      <div class="say" data-s="1">던지는 사람 말고,<br><em>공 없는 사람</em>을 봐.</div>
+      <p class="lead" data-s="2">어디로, 왜 달릴까? 영상을 보고 한 가지만 찾아 말해 봐요.</p>
+    </div>
+    <div class="vwrap" data-s="3">
+      <div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/piUyFwiZe_Y?rel=0" title="플래그풋볼 경기 영상" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+      <a class="vgo" href="https://www.youtube.com/watch?v=piUyFwiZe_Y" target="_blank" rel="noopener">영상이 안 보이면 새 탭에서 열기</a>
+    </div>
   </div>
 </section>
 
@@ -582,7 +594,7 @@ p{margin:0}
   <div class="tiles">
     <div class="tile" data-s="1"><h3>수비가 따라가면, 그 자리가 빈다</h3><p>공을 안 받는 선수가 공간을 만들어요.</p></div>
     <div class="tile" data-s="2"><h3>가운데로 몰리면, 바깥이 빈다</h3><p>스냅한 센터도 받을 수 있어요.</p></div>
-    <div class="tile" data-s="3"><h3>수비 1명, 공격 2명</h3><p>하나를 막으면 다른 하나가 비어요. 수비가 앞으로 나오면 뒤가 비어요.</p></div>
+    <div class="tile" data-s="3"><h3>수비 1명, <span style="white-space:nowrap">공격 2명</span></h3><p>하나를 막으면 다른 하나가 비어요. 수비가 앞으로 나오면 뒤가 비어요.</p></div>
   </div>
   <div class="banner amber" data-s="4">몸싸움도, 체격도 상관없다면? 빈 곳을 먼저 보는 팀이 이긴다!</div>
 </section>
